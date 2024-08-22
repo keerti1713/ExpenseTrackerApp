@@ -1,0 +1,76 @@
+﻿@model IEnumerable<ExpenseTracker.Models.Category>
+
+@{
+    ViewData["Title"] = "Index";
+}
+<div class="container c1">
+    <div class="index ">
+        <h3>Index</h3>
+        <p>
+            <div class="space flex c1 green">
+                <a asp-action="AddOrEdit">
+                    <span class="material-symbols-outlined size">
+                        add
+                    </span>
+                </a>
+            </div>
+        </p>
+
+        <table class="table c1">
+            <thead>
+                <tr>
+                    <th>
+                        @Html.DisplayNameFor(model => model.Title)
+                    </th>
+                    <th>
+                        @Html.DisplayNameFor(model => model.Icon)
+                    </th>
+                    <th>
+                        @Html.DisplayNameFor(model => model.Type)
+                    </th>
+                    <th></th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var item in Model)
+                {
+                    <tr>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.Title)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.Icon)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.Type)
+                        </td>
+                        <td>
+                            <a asp-action="AddOrEdit" asp-route-id="@item.CategoryId">
+                                <span class="material-symbols-outlined">
+                                    edit
+                                </span>
+                            </a> |
+                            <a asp-action="Details" asp-route-id="@item.CategoryId">
+                                <span class="material-symbols-outlined">
+                                    info
+                                </span>
+                            </a> |
+                            <a asp-action="Delete" asp-route-id="@item.CategoryId">
+                                <span class="material-symbols-outlined">
+                                    delete
+                                </span>
+                            </a>
+                        </td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+    </div>
+</div>
+<div class="space flex c1 ">
+    <a asp-controller="Dashboard" asp-action="Index">
+        <span class="material-symbols-outlined">
+            home
+        </span>
+    </a>
+</div>

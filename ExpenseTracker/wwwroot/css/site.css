@@ -1,0 +1,216 @@
+html {
+    font-size: 14px;
+}
+
+@media (min-width: 768px) {
+    html {
+        font-size: 16px;
+    }
+}
+
+* {
+    font-family: "Inter";
+}
+
+.btn:focus, .btn:active:focus, .btn-link.nav-link:focus, .form-control:focus, .form-check-input:focus {
+    box-shadow: 0 0 0 0.1rem white, 0 0 0 0.25rem #258cfb;
+}
+
+html {
+    position: relative;
+    min-height: 100%;
+}
+
+body {
+    margin-bottom: 60px;
+    background-color: #2B2B2B;
+    color: #FFFEED;
+}
+
+.e-bigger {
+    font-size: x-large;
+}
+
+.e-btn-group .custom-rbt-group {
+    width: 100%;
+}
+
+    .e-btn-group .custom-rbt-group .e-btn {
+        width: 50%;
+    }
+
+.custom-rbt-group label .e-btn {
+    box-shadow: none !important;
+    border: 1px solid #fff;
+    background-color: rgb(34 43 51);
+    color: #fff;
+}
+
+.e-btn-group .custom-rbt-group input:checked + label .e-btn {
+    background-color: #fff;
+    border: 1px solid #fff;
+    color: #fff;
+}
+
+.button {
+    margin-top: 10px;
+    height: 5vh;
+    width: 14vh;
+    font-size: 18px;
+    border-radius: 0.2rem;
+    border: none;
+    padding: 0.3rem;
+    background-color: forestgreen;
+    color: aliceblue;
+}
+
+a {
+    color: white;
+    font-size: 15px;
+    text-decoration: none;
+}
+
+.c1 {
+    padding: 5px;
+    border-radius: 0.5rem;
+    border: 0.5px solid #696969;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0.2rem;
+    margin: 0.15rem;
+}
+
+.material-symbols-outlined {
+    font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24
+}
+
+.green {
+    background-color: forestgreen;
+}
+
+.size {
+    height: 10px;
+    width: 10px;
+}
+
+.flex {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.class-control {
+    background-color: #474747;
+    color: white;
+    border-radius: 0.2rem;
+    border: none;
+    padding: 0.3rem;
+    margin: 0.3rem;
+}
+
+.control-label {
+    font-family: "Inter";
+}
+
+.space {
+    width: 37px;
+    height: 35px;
+}
+
+.btn-default {
+    cursor: pointer;
+    color: white;
+    background-color: #758694;
+    border: solid 0.1px white;
+    padding: 6px 12px;
+    border-radius: 0.4rem;
+}
+
+    .btn-default input {
+        display: none;
+    }
+
+input:checked + label {
+    color: #fff;
+    background-color: #7FA1C3;
+}
+
+.form-control {
+    background-color: #373737;
+    color: white;
+}
+
+.flex-end {
+    position: fixed;
+    top: 60px;
+    left: 0;
+}
+
+.grey {
+    background-color: #454545;
+    color: white;
+    border: solid 0.05px #373737;
+    padding: 5px;
+    margin: 0;
+}
+
+.widget.summary > div::after first-child {
+    padding: 1rem;
+    border-radius: 1rem;
+    font-weight: bold;
+}
+
+.widget {
+    border-radius: 1rem;
+    background-color: #474747;
+}
+
+.income {
+    background-color: #365E32;
+}
+
+.expense {
+    background-color: #A0153E;
+}
+
+.balance {
+    background-color: #EADBC8;
+    color: black;
+}
+
+.tab {
+    background-color: #323232;
+}
+
+.widget table {
+    background-color: #444444;
+    width: 100%;
+    border: none;
+}
+
+.cal {
+    margin: 0.3rem;
+    padding: 0.2rem;
+}
+
+.list {
+    margin: 0.3rem;
+    padding: 0.2rem;
+    max-height: 50vh;
+    overflow-y: auto;
+    overflow-x: hidden;
+}
+
+.table {
+    color: whitesmoke;
+    font-size: 16px;
+    background-color: #373737;
+    margin-bottom: 10px;
+}
+d-flex{
+    color:white;
+}

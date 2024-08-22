@@ -1,0 +1,54 @@
+﻿@model ExpenseTracker.Models.Transaction
+
+@{
+    ViewData["Title"] = "AddOrEdit";
+}
+<div class="container">
+    <div class="container c1">
+        <div class="row">
+            <h3> Create Transaction</h3>
+            <hr />
+            <div class="container">
+                <form asp-action="AddOrEdit" class="mb-3">
+                    <input type="hidden" name="TransactionId" value="@Model.TransactionId" />
+                    <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+                    <div class="form-group mb-3">
+                        <label asp-for="CategoryId" class="control-label"></label>
+                        <select asp-for="CategoryId" class="form-control" asp-items="ViewBag.Categories"></select>
+                    </div>
+                    <div class="form-group mb-3">
+                        <label asp-for="Amount" class="control-label"></label>
+                        <input asp-for="Amount" class="form-control" />
+                        <span asp-validation-for="Amount" class="text-danger"></span>
+                    </div>
+                    <div class="form-group mb-3">
+                        <label asp-for="Note" class="control-label"></label>
+                        <input asp-for="Note" class="form-control" />
+                        <span asp-validation-for="Note" class="text-danger"></span>
+                    </div>
+                    <div class="form-group mb-3">
+                        <label asp-for="Date" class="control-label"></label>
+                        <input asp-for="Date" class="form-control" asp-format="MMM-dd-yy"/>
+                        <span asp-validation-for="Date" class="text-danger"></span>
+                    </div>
+                    <div class="form-group">
+                        <input type="submit" value="Submit" class="button btn" />
+                    </div>
+                </form>
+            </div>
+        </div>
+
+     </<div>
+ </div>
+
+<div>
+        <a asp-action="Index">
+            <span class="material-symbols-outlined size">
+                list_alt
+            </span>
+        </a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}
